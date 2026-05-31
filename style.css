@@ -1,0 +1,9 @@
+.Titulo{
+    background-color: beige;
+    text-align: center;
+}
+
+.Aviso_importante{
+    color: rgb(7, 43, 26);
+    text-decoration: dotted;
+}
