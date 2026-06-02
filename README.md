@@ -1,24 +1,35 @@
 # Descripción
-Este es un programa que simula el movimiento parabólico de un proyectil, en un escenario donde un cazador apunta a un mono para dispararle
+Este es un programa que simula el movimiento parabólico de un proyectil, en un escenario donde un cazador apunta a un mono para dispararle. El mono es inteligente, y este empezará a caer una vez que el proyectil haya sido disparado. Con esta información, pueden suceder dos escenarios:
+<ol>
+  <li>El proyectil alcanza al mono</li>
+  <li>El proyectil toca el suelo, y no logra alcanzar al mono</li>
+</ol>
+
+# ¿Cómo ejecuto este programa?
+¡Fácil! Solamente tienes que descargar este repositorio como archivo .zip, y una vez que lo hayas exportado, haz click derecho en el archivo 'index.html', vas a la opción 'Abrir con', eliges el navegador de tu preferencia, y ahí tienes el simulador 
+
 # Ecuaciones utilizadas
 <strong><ul>
   <li>
-    <div>Para la trayectoria del proyectil</div>
-    <div><img width="642" height="189" alt="image" src="https://github.com/user-attachments/assets/59f02f2f-7cd6-449e-ae3a-57aa923dbe74" /></div>
+    <div>Para la abscisa y ordenada de la posición del proyectil</div>
+    <img width="370" height="166" alt="image" src="https://github.com/user-attachments/assets/eb6832f2-31ed-46f0-9c7d-b4f5f109d51f" />
+    <img width="510" height="139" alt="image" src="https://github.com/user-attachments/assets/21b85190-83b3-4d1d-9f4d-b9f0de9be494" />
   </li>
   <li>
-    <div>Para determinar la máxima distancia que recorre el proyectil (o el punto donde toca el suelo)</div>
-    <div><img width="655" height="182" alt="image" src="https://github.com/user-attachments/assets/b478953c-8c4e-4025-8999-c96235039bbc" /></div>
-    <div><img width="653" height="195" alt="image" src="https://github.com/user-attachments/assets/841551db-6afd-4aad-9d80-9f6da28584a8" /></div>
-    <div><img width="619" height="154" alt="image" src="https://github.com/user-attachments/assets/a908a238-8a36-4928-a7dc-cfc2702c1388" /></div>
-    <div><img width="876" height="205" alt="image" src="https://github.com/user-attachments/assets/19e419f3-4133-4e7d-a1a4-497991cd19a9" /></div>
-    <div><img width="592" height="170" alt="image" src="https://github.com/user-attachments/assets/8e49f35d-0121-4a3e-8b49-dbec57d76798" /></div>
+    <div>Para calcular la caída libre del mono (suponiendo que está en reposo). La ecuación utilizada es la segunda</div>
+    <img width="497" height="260" alt="image" src="https://github.com/user-attachments/assets/9e8a161b-85dd-4c8c-8d07-5cc02200a8e8" />
   </li>
   <li>
-    <div>Para determinar la máxima altura que alcanza el proyectil</div>
-    <div><img width="573" height="183" alt="image" src="https://github.com/user-attachments/assets/dddae72f-59e4-485e-a206-aa32b54d48c1" /></div>
-    <div><img width="543" height="169" alt="image" src="https://github.com/user-attachments/assets/0ec1e68d-2b62-4e5f-87ac-6ef0b521e458" /></div>
-    <div><img width="824" height="192" alt="image" src="https://github.com/user-attachments/assets/e68778d2-ef79-48e8-8571-7a9d0075cf54" /></div>
-    <div><img width="527" height="169" alt="image" src="https://github.com/user-attachments/assets/5bdfa27a-8a11-4839-8566-22a74469bfc9" /></div>
+    <div>Para el ángulo con el cual el cazador apunta</div>
+    <img width="337" height="151" alt="image" src="https://github.com/user-attachments/assets/8726b1c6-1134-4d87-95a8-725cd04b4759" />
   </li>
 </ul></strong>
+
+# Símbolos utilizados
+
+<div>V₀: Velocidad Inicial</div>
+<div>d: Distancia entre proyectil y el mono</div>
+<div>h: La altura en la que se encuentra el mono</div>
+<div>Ѳ: Ángulo que se apunta hacia el mono</div>
+<div>g: Gravedad</div>
+<div>t: Tiempo</div>
