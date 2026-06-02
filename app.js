@@ -185,7 +185,7 @@ function loopSimulacion() {
     let data = dibujarEscenario();
 
     // Condición de Choque estricta (< 1 mm = 0.001 metros)
-    if (data.distRelativa < 2) {
+    if (data.distRelativa < 1) {
         estaEjecutandose = false;
         ocurrioColision = true;
         alertaColision.style.display = 'block';
@@ -195,7 +195,7 @@ function loopSimulacion() {
     // Condición de fin por si fallan o caen al suelo
     if (data.yp <= 0 && data.xp > 0 || data.ym <= 0) {
         // Si la velocidad es muy baja y no se impactaron en el aire
-        if(!ocurrioColision && data.distRelativa < 2) {
+        if(!ocurrioColision && data.distRelativa < 1) {
             // El impacto puede ocurrir en el suelo de igual forma por la naturaleza matemática
             estaEjecutandose = false;
             ocurrioColision = true;
