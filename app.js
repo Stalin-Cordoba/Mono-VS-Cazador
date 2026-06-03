@@ -127,14 +127,6 @@ function dibujarEscenario() {
     canvasContext.arc(cBase.x, cBase.y, 12, 0, 2 * Math.PI);
     canvasContext.fillStyle = '#34495e';
     canvasContext.fill();
-    
-    // Línea del cañón apuntando
-    canvasContext.beginPath();
-    canvasContext.moveTo(cBase.x, cBase.y);
-    canvasContext.lineTo(cBase.x + 20 * Math.cos(theta), cBase.y - 20 * Math.sin(theta)); // Se usan las componentes de vector
-    canvasContext.lineWidth = 4;
-    canvasContext.strokeStyle = '#2c3e50';
-    canvasContext.stroke();
 
     // Dibujar Proyectil (Bola Amarilla/Roja como la imagen)
     canvasContext.beginPath();
