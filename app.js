@@ -5,6 +5,7 @@ const canvasContext = canvas.getContext('2d');
 // V0: Velocidad Inicial
 // Dist: Distancia
 // Alt: Altura del mono
+// Theta: Ángulo
 const rangoV0 = document.getElementById('rangoV0');
 const rangoDist = document.getElementById('rangoDist');
 const rangoAlt = document.getElementById('rangoAlt');
@@ -20,8 +21,8 @@ const btnReiniciar = document.getElementById('btnReiniciar');
 
 const projX_disp = document.getElementById('projX');
 const projY_disp = document.getElementById('projY');
-const monkX_disp = document.getElementById('monoX');
-const monkY_disp = document.getElementById('monoY');
+const monoX_disp = document.getElementById('monoX');
+const monoY_disp = document.getElementById('monoY');
 const distanciaRelativa_disp = document.getElementById('dRelativa');
 const alertaColision = document.getElementById('alertaColision');
 const alertaNoColision = document.getElementById('alertaNoColision');
@@ -126,10 +127,11 @@ function dibujarEscenario() {
     canvasContext.arc(cBase.x, cBase.y, 12, 0, 2 * Math.PI);
     canvasContext.fillStyle = '#34495e';
     canvasContext.fill();
+    
     // Línea del cañón apuntando
     canvasContext.beginPath();
     canvasContext.moveTo(cBase.x, cBase.y);
-    canvasContext.lineTo(cBase.x + 20 * Math.cos(theta), cBase.y - 20 * Math.sin(theta));
+    canvasContext.lineTo(cBase.x + 20 * Math.cos(theta), cBase.y - 20 * Math.sin(theta)); // Se usan las componentes de vector
     canvasContext.lineWidth = 4;
     canvasContext.strokeStyle = '#2c3e50';
     canvasContext.stroke();
@@ -158,6 +160,7 @@ function dibujarEscenario() {
     canvasContext.arc(mCanvas.x, mCanvas.y, 10, 0, 2 * Math.PI);
     canvasContext.fillStyle = '#a0522d';
     canvasContext.fill();
+    
     // Cabeza/Detalle del "Mono"
     canvasContext.beginPath();
     canvasContext.arc(mCanvas.x, mCanvas.y - 4, 5, 0, 2 * Math.PI);
@@ -169,8 +172,8 @@ function dibujarEscenario() {
             
     projX_disp.textContent = xp.toFixed(4);
     projY_disp.textContent = yp.toFixed(4);
-    monkX_disp.textContent = xm.toFixed(4);
-    monkY_disp.textContent = ym.toFixed(4);
+    monoX_disp.textContent = xm.toFixed(4);
+    monoY_disp.textContent = ym.toFixed(4);
     distanciaRelativa_disp.textContent = distRelativa.toFixed(6);
 
     return { xp, yp, xm, ym, distRelativa };

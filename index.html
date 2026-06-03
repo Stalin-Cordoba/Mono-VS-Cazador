@@ -20,33 +20,27 @@
         <!-- Panel de Control -->
         <div class="panel-control">
             <h3>Parámetros de Simulación</h3>
-            
             <div class="parametro">
                 <label for="rangeV0">Velocidad Inicial Proyectil: <span id="valV0" class="mostrar-valor">35 m/s</span></label>
                 <input type="range" id="rangoV0" min="15" max="60" step="1" value=35>
             </div>
-            
             <div class="parametro">
                 <label for="rangeDist">Distancia Horizontal: <span id="valDist" class="mostrar-valor">50 m</span></label>
                 <input type="range" id="rangoDist" min="30" max=75 step="1" value="50">
             </div>
-
             <div class="parametro">
                 <label for="rangeAlt">Altura del Mono: <span id="valAlt" class="mostrar-valor">30 m</span></label>
                 <input type="range" id="rangoAlt" min="15" max="45" step="1" value="30">
             </div>
-
             <div class="parametro">
                 <label>Ángulo Calculado: <span id="valAngulo" style="color:#2980b9; font-weight:bold;">0°</span></label>
                 <div style="color: #7f8c8d; display:block; margin-top:2px;">El cazador apunta directamente a la posición inicial del mono.</div>
             </div>
-
             <div class="botones">
                 <button id="btnEmpezar">Disparar</button>
                 <button id="btnPausar">Pausar</button>
                 <button id="btnReiniciar">Reiniciar</button>
             </div>
-
             <div class="telemetria">
                 <strong>[Telemetría en Tiempo Real]</strong><br><br>
                 <strong>Proyectil:</strong><br>
