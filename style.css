@@ -54,7 +54,7 @@ label {
     margin-bottom: 5px;
     color: #34495e;
 }
-input[type="range"] {
+input{
     width: 100%;
 }
 .mostrar-valor {
@@ -77,6 +77,7 @@ button {
     font-weight: bold;
     transition: background 0.2s;
 }
+
 #btnEmpezar { background-color: #2ecc71; color: white; }
 #btnEmpezar:hover { background-color: #27ae60; }
 #btnPausar { background-color: #f1c40f; color: white; }
@@ -115,6 +116,7 @@ button {
     margin-top: 10px;
     animation: blink 1s infinite;
 }
+/*Se utiliza para '.alerta-colision' y 'alerta-no-colision', para que parpadeen :D*/
 @keyframes blink {
     0% { opacity: 1; }
     50% { opacity: 0.5; }
